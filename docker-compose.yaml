@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: db-go-tweets
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=go_tweets
+      - MYSQL_ROOT_PASSWORD=go_tweets
+    volumes:
+      - db-go-tweets-data:/var/lib/mysql
+
+volumes:
+  db-go-tweets-data:
