@@ -5,8 +5,8 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_DATABASE=go_tweets
-      - MYSQL_ROOT_PASSWORD=go_tweets
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     volumes:
       - db-go-tweets-data:/var/lib/mysql
 
